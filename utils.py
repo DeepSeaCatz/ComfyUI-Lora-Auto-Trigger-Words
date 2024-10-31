@@ -15,7 +15,7 @@ def get_preview_path(name, type):
     
     file_path_no_ext = os.path.splitext(file_path)[0]
     item_image=None
-    for ext in ["png", "jpg", "jpeg", "preview.png"]:
+    for ext in ["preview.png", "preview.jpg", "preview.jpeg", "preview.gif", "preview.webp", "preview.tiff"]:
         has_image = os.path.isfile(file_path_no_ext + "." + ext)
         if has_image:
             item_image = f"{file_name}.{ext}"
